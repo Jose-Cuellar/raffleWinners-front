@@ -29,22 +29,20 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
       </div>
       <div class="offcanvas-body">
-        <ul>
-          <li class="nav-item">
-            <button class="btn btn-secondary my-2">
-              <router-link class="route" to="/register">
-                Gestionar usuarios
-              </router-link>
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-secondary my-2">
-              <router-link class="route" to="/register">
-                Gestionar rifas
-              </router-link>
-            </button>
-          </li>
-        </ul>
+        <div class="col-sm">
+          <button class="btn btn-secondary my-2" data-bs-dismiss="offcanvas">
+            <router-link class="route" :to="{ name: 'userManagement' }">
+              Gestionar usuarios
+            </router-link>
+          </button>
+        </div>
+        <div class="col-sm">
+          <button class="btn btn-secondary my-2" data-bs-dismiss="offcanvas">
+            <router-link class="route" :to="{ name: 'raffleManagement' }">
+              Gestionar rifas
+            </router-link>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -59,7 +57,7 @@ const router = useRouter()
 
 function logout() {
   localStorage.clear()
-  router.push('/login')
+  router.push({ name: 'home' })
 }
 </script>
 

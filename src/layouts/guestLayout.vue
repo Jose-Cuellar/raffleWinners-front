@@ -10,14 +10,14 @@
             <li class="nav-item p-2">
               <button class="btn btn-primary">
                 <router-link class="route" to="/register">
-                  Register
+                  Registro
                 </router-link>
               </button>
             </li>
             <li class="nav-item p-2">
               <button class="btn btn-primary">
                 <router-link class="route" to="/login">
-                  Login
+                  Inicio de sesión
                 </router-link>
               </button>
             </li>
